@@ -55,7 +55,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background-image: url("GTA 6 1.png");
+            background-image: url("ULTIMATE_EDITION_01.16qc1xq5nigg1.jpg");
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -324,7 +324,9 @@
             color: #ffffff;
             text-transform: uppercase;
             margin-bottom: 25px;
-            white-space: nowrap;
+            white-space: pre-line;
+            line-height: 1.35;
+            text-align: center;
             position: relative;
             display: inline-block;
         }
@@ -854,7 +856,7 @@
         <div id="leftCard" class="side-card">
             <div class="side-card-label">Official Art</div>
             <div class="side-card-img-container">
-                <img class="side-card-img" src="poster_full.0az_iud2g3y4j.jpg" alt="GTA 6 Official Poster">
+                <img class="side-card-img" src="ULTIMATE_EDITION_VICE_CITY_STYLE_01.0.u1gt~99yzks.jpg" alt="GTA 6 Official Poster">
             </div>
             <div class="side-card-footer">Grand Theft Auto VI</div>
         </div>
@@ -862,7 +864,7 @@
         <!-- Central Timer Panel -->
         <div class="center-container">
             <div id="channelName" class="logo-text">MALLU THEFT AUTO</div>
-            <div id="countdownTopic" class="topic-text">LETS PLAY GTA 6 TOGETHER</div>
+            <div id="countdownTopic" class="topic-text">Same Streets.<br>New King..</div>
             
             <div class="timer-grid">
                 <div class="timer-card">
@@ -888,7 +890,7 @@
         <div id="rightCard" class="side-card">
             <div class="side-card-label">Trailer Feed</div>
             <div class="side-card-img-container">
-                <img class="side-card-img" src="gta 6 2.jpg" alt="GTA VI Keyart Image">
+                <img class="side-card-img" src="ULTIMATE_EDITION_GROTTI_CHEETAH_01.0a.wy3s_ogjey.jpg" alt="GTA VI Keyart Image">
             </div>
             <div class="side-card-footer">Vice City Awaits</div>
         </div>
@@ -904,8 +906,8 @@
     <div class="footer-ticker-container">
         <div class="ticker-wrap">
             <div id="marqueeTicker" class="ticker">
-                <span>🔥 I PRE-ORDERED GTA 6 • LIVE ON MALLU THEFT AUTO • LETS PLAY GTA 6 TOGETHER 🔥</span>
-                <span>🔥 I PRE-ORDERED GTA 6 • LIVE ON MALLU THEFT AUTO • LETS PLAY GTA 6 TOGETHER 🔥</span>
+                <span>🔥 I PRE-ORDERED GTA 6 • LIVE ON MALLU THEFT AUTO • SAME STREETS. NEW KING.. 🔥</span>
+                <span>🔥 I PRE-ORDERED GTA 6 • LIVE ON MALLU THEFT AUTO • SAME STREETS. NEW KING.. 🔥</span>
             </div>
         </div>
     </div>
@@ -938,7 +940,7 @@
 
             <div class="form-group">
                 <label for="inputTopic">Countdown Topic</label>
-                <input type="text" id="inputTopic" class="form-input" placeholder="LETS PLAY GTA 6 TOGETHER">
+                <input type="text" id="inputTopic" class="form-input" placeholder="Same Streets. New King..">
             </div>
 
             <div class="form-group">
@@ -1077,8 +1079,8 @@
         // Default settings config schema
         const DEFAULT_CONFIG = {
             channelName: "MALLU THEFT AUTO",
-            countdownTopic: "LETS PLAY GTA 6 TOGETHER",
-            tickerText: "🔥 I PRE-ORDERED GTA 6 • LIVE ON MALLU THEFT AUTO • LETS PLAY GTA 6 TOGETHER 🔥",
+            countdownTopic: "Same Streets.\nNew King..",
+            tickerText: "🔥 I PRE-ORDERED GTA 6 • LIVE ON MALLU THEFT AUTO • SAME STREETS. NEW KING.. 🔥",
             targetDate: "2026-06-25T12:00",
             liveText: "LIVE",
             accentColor: "#ff007f",
@@ -1089,7 +1091,7 @@
             showLeftCard: true,
             showRightCard: true,
             hideGear: false,
-            audioUrl: "music.mp3",
+            audioUrl: "music.MP3",
             audioVolume: 50,
             audioPlaying: false,
             channelLogoUrl: "logo.png",
@@ -1181,7 +1183,7 @@
         function applyConfig() {
             // Apply text contents
             channelNameEl.textContent = config.channelName;
-            countdownTopicEl.textContent = config.countdownTopic;
+            countdownTopicEl.innerHTML = (config.countdownTopic || "Same Streets.\nNew King..").replace(/\n/g, "<br>");
             liveTextEl.textContent = config.liveText;
             
             // Rebuild marquee content
